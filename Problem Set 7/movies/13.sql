@@ -1,0 +1,1 @@
+SELECT name from people WHERE name != 'Kevin Bacon' AND id IN (SELECT person_id FROM stars WHERE movie_id IN (SELECT movie_id from stars WHERE person_id IN (SELECT id from people WHERE name = 'Kevin Bacon' AND birth = 1958)));
